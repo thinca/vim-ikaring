@@ -1,0 +1,80 @@
+*ikaring.txt*	The Vim plugin for ikaring.
+
+Version: 1.0
+Author : thinca <thinca+vim@gmail.com>
+License: zlib License
+
+==============================================================================
+CONTENTS					*ikaring-contents*
+
+INTRODUCTION			|ikaring-introduction|
+INTERFACE			|ikaring-interface|
+  COMMANDS			  |ikaring-commands|
+CUSTOMIZING			|ikaring-customizing|
+CHANGELOG			|ikaring-changelog|
+
+
+
+==============================================================================
+INTRODUCTION					*ikaring-introduction*
+
+*ikaring.vim* is a Vim plugin to browse ikaring(イカリング)(*).
+
+(*) https://splatoon.nintendo.net/
+
+Requirements:
+- Vim 7.4 or later
+
+Latest version:
+https://github.com/thinca/vim-ikaring
+
+
+
+==============================================================================
+INTERFACE					*ikaring-interface*
+
+------------------------------------------------------------------------------
+COMMANDS					*ikaring-commands*
+
+:Ikaring[!] {mode} [args]			*:Ikaring*
+	Opens the ikaring browser buffer.  {mode} is one of following.
+
+	friend					*:Ikaring-friend*
+		Shows friend list.
+	ranking					*:Ikaring-ranking*
+		Shows ranking.
+	profile [user]				*:Ikaring-profile*
+		Shows player profile.
+		[user] takes a user name(=mii name) or part of user name.
+	stage					*:Ikaring-stage*
+		Shows stage schedule.
+
+	Clears the authentication info with [!].
+
+
+
+==============================================================================
+CUSTOMIZING					*ikaring-customizing*
+
+g:ikaring#username				*g:ikaring#username*
+	Your NNID.
+
+g:ikaring#password				*g:ikaring#password*
+	Password of NNID.
+
+g:ikaring#cache_directory			*g:ikaring#cache_directory*
+	Directory to cache cookie, friend info, and others.
+
+	Default: ~/.cache/ikaring_vim
+
+
+
+==============================================================================
+CHANGELOG					*ikaring-changelog*
+
+1.0	2015-11-13
+	- Initial version.
+
+
+==============================================================================
+vim:tw=78:fo=tcq2mM:ts=8:ft=help:norl
