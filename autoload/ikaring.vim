@@ -32,11 +32,16 @@ function! ikaring#_read(path) abort
       \ ]
     endif
   endtry
+  setlocal modifiable noreadonly
   silent 1 put =lines
   silent 1 delete _
   if has_key(view, 'init')
     call view.init()
   endif
+
+  setlocal nomodifiable readonly buftype=nofile
+  setlocal nonumber norelativenumber nolist
+  setlocal noswapfile nomodeline colorcolumn=
 endfunction
 
 function! ikaring#cmd_complete(lead, cmd, pos) abort
