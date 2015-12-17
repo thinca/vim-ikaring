@@ -61,7 +61,8 @@ function! s:Agent.last_response() abort
 endfunction
 
 function! s:Agent.on_error(res) abort
-  throw printf('vital: Web.HTTP.Agent: %03d %s' res.status, res.statusText)
+  throw printf('vital: Web.HTTP.Agent: %03d %s',
+  \            a:res.status, a:res.statusText)
 endfunction
 
 function! s:Agent._make_settings(method, url, ...) abort

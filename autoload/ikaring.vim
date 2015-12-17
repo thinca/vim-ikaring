@@ -20,13 +20,13 @@ function! ikaring#_read(path) abort
   try
     let lines = view.content(path_data.args)
   catch /^vital: Web.HTTP.Agent: \d\+/
-    let agent = ikaring#get_agent()
-    let res = agent.last_response()
-    if res.status == 503
-      let lines = ['メンテナンス中です']
+    let response = matchstr(v:exception, '^vital: Web.HTTP.Agent: \zs.\+')
+    let status = matchstr(response, '^\d\+')
+    if status == 503
+      let lines = ['メンテナンス中です。']
     else
       let lines = [
-      \   res.status . ' ' . res.statusText,
+      \   response,
       \   '何かがおかしいようです。',
       \   '再ログイン(:Ikaring!)を試してみてください。',
       \ ]
