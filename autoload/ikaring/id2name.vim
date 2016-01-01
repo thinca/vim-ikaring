@@ -68,6 +68,7 @@ let s:weapons = {
 \   '7bef265d011060ef6cf88033ec2ecd6a1c73790caefe7bcbd7be323cc3584cbd': 'プロモデラーMG',
 \   'de63b9c7c5f9f5ab76456328b11f2f6ac8f17c7c91ff402727625fc46d0a3055': 'プロモデラーRG',
 \   'efe0cba0dfeb40bbea197c9ead9241bb719b8ed6bcd2131b339c45df051379b2': 'ホクサイ',
+\   '8707d8047c8dbd35d6cefa2a08d55be9f939dcaea4db44b7e0e4aa599736cb01': 'ホクサイ・ヒュー',
 \   '282fd792a220632b6c34bfbb564629a67b9f540d1a1ab212f9e2f30c9174a820': 'ホットブラスター',
 \   'd78618b66b7562fbbb1a2455fa959216204890da362aca1b0726e09aad7b9408': 'ホットブラスターカスタム',
 \   '56f4e14ac7cb57af50030071da35700af501985ceca37351330eee6df0c2c2da': 'ボールドマーカー',
