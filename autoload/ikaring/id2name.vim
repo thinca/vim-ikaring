@@ -35,6 +35,7 @@ let s:weapons = {
 \   '686933ec4f43c67c153fd62984601c37d2a136c42878405724bb65020700937a': 'スクイックリンα',
 \   'fe8da69077740b1db12a2e1cc2375231271fee3d05ee0f5ba54d9bde83a4baab': 'スクイックリンβ',
 \   'a63ba19229be34cc366f6fab6e2a79d3fb4d4901cbeb4ea23170dab7e9beb7cd': 'スクリュースロッシャー',
+\   '58105e03607ff7ee7f8837c42ac46d4500a65b3481845a07abea5d7a0c7dc9ea': 'スクリュースロッシャーネオ',
 \   '2fee2bac1e22b2ef19107e3eb58aabc4fd54e9ced476d1d2ac0b7d176d11d2ba': 'スプラシューター',
 \   'e67b1303cfe0d3335e7e078244c84c17792e2fb54dbd789433fecaf102bd3362': 'スプラシューターコラボ',
 \   'a1c5e419c8b284aa684726d27b2472b69d1a7215d570579d85ad657da7180f9a': 'スプラスコープ',
