@@ -53,6 +53,7 @@ let s:weapons = {
 \   '36fe4791f65cc1db834a4d040b22a2ea637e8ab75ad37ce3db4caea3247e30af': 'ノヴァブラスター',
 \   '6b34ccae7b426b59c68e97fa699f0f5a1f799f524bfbdeb52989e0fce9a53039': 'ノヴァブラスターネオ',
 \   'dd1711429bdfe5bd809762b23811e648e47f1d7bf51f48de6f7759cb68ec15aa': 'ハイドラント',
+\   'b55b9b85d532918a14c0c986a6962aadb619944dac31fd11b28208ef6836b90c': 'ハイドラントカスタム',
 \   '251c94c0f851f5227d7795735af968513ac8f008cd024043e86fdb87b1f089fa': 'バケットスロッシャー',
 \   'f4a3cedfdd3d4119ddcc5c3ea2d327e63e1159250f2fccef4cc3692bfd3de973': 'バケットスロッシャーデコ',
 \   '08ac41b5dfeb33c35fa2d03269f78ea4dad63b88cc6be3221b733897c7e82135': 'バレルスピナー',
