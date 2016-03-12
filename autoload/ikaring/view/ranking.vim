@@ -40,7 +40,7 @@ function! s:view.init() abort
 endfunction
 
 function! s:open_profile() abort
-  let username = matchstr(getline('.'), '^\s*\d\+:\s*\d\+\s*\zs.\+$')
+  let username = matchstr(getline('.'), '\C^\s*\d\+:\s*\d\+\s*\zs.\+$')
   if username !=# ''
     call ikaring#open('profile', [username])
   endif

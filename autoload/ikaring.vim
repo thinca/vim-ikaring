@@ -20,8 +20,8 @@ function! ikaring#_read(path) abort
   try
     let lines = view.content(path_data.args)
   catch /^vital: Web.HTTP.Agent: \d\+/
-    let response = matchstr(v:exception, '^vital: Web.HTTP.Agent: \zs.\+')
-    let status = matchstr(response, '^\d\+')
+    let response = matchstr(v:exception, '\C^vital: Web.HTTP.Agent: \zs.\+')
+    let status = matchstr(response, '\C^\d\+')
     if status == 503
       let lines = ['メンテナンス中です。']
     else
@@ -46,11 +46,11 @@ endfunction
 
 function! ikaring#cmd_complete(lead, cmd, pos) abort
   let head = a:cmd[: a:pos - 1]
-  let arg = matchstr(head, '^.\{-}I\%[karing]\s\+\zs.*')
+  let arg = matchstr(head, '\C^.\{-}I\%[karing]\s\+\zs.*')
   if arg =~# '^\w*$'
     let candidates = ikaring#view#names()
   else
-    let view_name = matchstr(arg, '^\w\+')
+    let view_name = matchstr(arg, '\C^\w\+')
     let view = ikaring#view#get(view_name)
     let candidates = has_key(view, 'complete') ? view.complete() : []
   endif

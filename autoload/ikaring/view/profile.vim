@@ -108,7 +108,7 @@ function! s:protections(dom) abort
   let equips_dom = protections_dom.childNodes()
   let protections = {}
   for equip_dom in equips_dom
-    let parts = matchstr(equip_dom.attr['class'], '^equip-\zs\w\+')
+    let parts = matchstr(equip_dom.attr['class'], '\C^equip-\zs\w\+')
     let protections[parts] = s:protection(equip_dom)
   endfor
   return protections
@@ -156,11 +156,11 @@ function! s:gearpower_name(dom) abort
 endfunction
 
 function! s:equip_id(dom) abort
-  return matchstr(a:dom.attr['style'], '/equipment/\zs\w\+')
+  return matchstr(a:dom.attr['style'], '\C/equipment/\zs\w\+')
 endfunction
 
 function! s:gearpower_id(dom) abort
-  return matchstr(a:dom.attr['style'], '/gearpower/svg/\zs\w\+')
+  return matchstr(a:dom.attr['style'], '\C/gearpower/svg/\zs\w\+')
 endfunction
 
 function! ikaring#view#profile#new() abort
