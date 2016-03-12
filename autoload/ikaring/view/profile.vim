@@ -160,7 +160,7 @@ function! s:equip_id(dom) abort
 endfunction
 
 function! s:gearpower_id(dom) abort
-  return matchstr(a:dom.attr['style'], '/gearpower/\zs\w\+')
+  return matchstr(a:dom.attr['style'], '/gearpower/svg/\zs\w\+')
 endfunction
 
 function! ikaring#view#profile#new() abort
