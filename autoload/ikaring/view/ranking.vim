@@ -20,10 +20,14 @@ function! s:view.content(args) abort
   let lines = ['ランキング']
   let sep = repeat('-', 30)
   for [title, key] in [
-  \   ['レギュラーマッチ', 'regular'], ['ガチマッチ', 'gachi']
+  \   ['レギュラーマッチ', 'regular'],
+  \   ['ガチマッチ', 'gachi'],
+  \   ['フェス', 'festival'],
   \ ]
-    call ikaring#friend#add(data[key])
-    let lines += [sep] + s:ranking_lines(title, data[key]) + ['']
+    if has_key(data, key)
+      call ikaring#friend#add(data[key])
+      let lines += [sep] + s:ranking_lines(title, data[key]) + ['']
+    endif
   endfor
   call ikaring#friend#save()
   return lines
