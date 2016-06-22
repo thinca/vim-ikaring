@@ -34,7 +34,7 @@ function! ikaring#_read(path) abort
   endtry
   setlocal modifiable noreadonly
   silent 1 put =lines
-  silent 1 delete _
+  keepjumps silent 1 delete _
   if has_key(view, 'init')
     call view.init()
   endif
